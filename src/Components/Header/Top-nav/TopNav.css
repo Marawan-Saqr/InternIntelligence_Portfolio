@@ -1,0 +1,11 @@
+.navbar {
+  background-color: #e7e7e7 !important;
+}
+
+.navbar .nav-link {
+  font-weight: 600;
+}
+
+.navbar .nav-link:hover {
+  color: var(--primary)
+}

@@ -22,7 +22,7 @@ const testimonialsData = [
 
 const Testimonials = () => {
   return (
-    <Container className='testimonials'>
+    <Container className='testimonials' id="testimonials">
       <h2 className='text-center mb-4'>Testimonials</h2>
       <Carousel indicators={true} controls={true}>
         {testimonialsData.map((testimonial, index) => (

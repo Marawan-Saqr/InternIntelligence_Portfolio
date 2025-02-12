@@ -8,7 +8,7 @@ const Experince = () => {
   const [projects] = useState(projectsData);
 
   return (
-    <div className="experince">
+    <div className="experince" id="experience">
       <h2 className="text-center">Experince</h2>
       {projects.length >= 1 ? (
         projects.map((project, index) => (

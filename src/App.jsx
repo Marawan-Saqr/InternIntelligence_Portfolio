@@ -1,6 +1,7 @@
 import { Container } from 'react-bootstrap';
 import Header from './Components/Header/Header.jsx';
 import Experince from './Components/Experince/Experince.jsx';
+import Acheivments from './Components/Acheivments/Acheivments.jsx';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
     <Container>
       <Header />
       <Experince />
+      <Acheivments />
     </Container>
     </div>
   )

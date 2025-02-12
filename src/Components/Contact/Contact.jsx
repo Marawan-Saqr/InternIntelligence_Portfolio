@@ -4,7 +4,7 @@ import { Form } from 'react-bootstrap';
 
 const Contact = () => {
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <div className="container">
         <h2 className="text-center">Contact</h2>
         <p className="text-center">

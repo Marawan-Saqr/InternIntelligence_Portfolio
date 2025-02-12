@@ -1,5 +1,5 @@
 .hero {
-  margin-top: 40px;
+  margin-top: 140px;
 }
 
 @media (max-width: 767px) {
@@ -152,11 +152,23 @@
   all: unset;
   cursor: pointer;
   font-size: 15px;
-  position: fixed;
-  bottom: 20px;
+  position: absolute;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 0.9s infinite ease-in-out;
+}
+
+@media (max-width: 767px) {
+  .hero .down {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero .down {
+    display: none;
+  }
 }
 
 @keyframes bounce {

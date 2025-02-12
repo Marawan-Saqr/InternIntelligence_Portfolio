@@ -9,3 +9,78 @@
 .navbar .nav-link:hover {
   color: var(--primary)
 }
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease-in-out;
+  padding: 20px;
+  z-index: 1050;
+}
+
+.sidebar.show {
+  left: 0;
+  flex-direction: column;
+}
+
+.sidebar-nav .nav-link {
+  display: block;
+  padding: 10px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar-nav .nav-link:hover {
+  background: #f1f1f1;
+}
+
+.main-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.main-nav .nav-link {
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+}
+
+.main-nav .nav-link:hover {
+  color: var(--primary);
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .main-nav {
+    display: none;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1049;
+}
+
+.top-nav-bar {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.top-nav-bar.scrolled {
+  background-color: #fff !important;
+}

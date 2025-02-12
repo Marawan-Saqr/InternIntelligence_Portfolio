@@ -5,7 +5,7 @@ import './About.css';
 
 const About = () => {
   return (
-    <div className="about">
+    <div className="about" id="about">
       <h2 className="text-center">About</h2>
       <Row className="align-items-center align-items-center">
         <Col lg={4}>

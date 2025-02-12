@@ -12,7 +12,7 @@ const achievements = [
 
 const Achievements = () => {
   return (
-    <div className='achievements'>
+    <div className='achievements' id="achievements">
       <h2 className='text-center'>Achievements</h2>
       <Row className='justify-content-center'>
         <Col lg={7}>

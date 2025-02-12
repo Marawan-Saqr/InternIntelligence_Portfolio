@@ -12,7 +12,7 @@ const Blogs = () => {
 
 
   return (
-    <div className="blogs">
+    <div className="blogs" id="Blogs">
       <h2 className="text-center">Blogs</h2>
       <Row>
         {blogs.length >= 1 ? (

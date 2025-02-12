@@ -3,18 +3,42 @@
   display: inline-block;
 }
 
+/* تأثير الصورة */
 .project-card .left img {
   border-radius: 15px;
   transition: 0.3s;
-  cursor: pointer;
   position: relative;
   z-index: 1;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
 }
 
+/* تأثير الكشاف */
+.project-card .left::before {
+  content: "";
+  position: absolute;
+  top: var(--mouse-y, 50%);
+  left: var(--mouse-x, 50%);
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.74) 0%, rgba(255, 255, 255, 0) 80%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out, transform 0.1s linear;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.project-card .left:hover::before {
+  opacity: 1;
+}
+
+/* تأثير الظل عند التحويم */
+.project-card .left img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 3px 18px -3px black;
+}
+
+/* تأثير طبقة الشفافية عند التحويم */
 .project-card .left::after {
   content: "";
   position: absolute;
@@ -28,33 +52,13 @@
   transition: opacity 0.3s ease-in-out;
   z-index: 2;
   pointer-events: none;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
 }
 
 .project-card .left:hover::after {
   opacity: 1;
 }
 
-.project-card .left img:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 3px 18px -3px black;
-}
-
-@media (max-width: 767px) {
-  .project-card .right {
-    margin-top: 15px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .project-card .right {
-    margin-top: 15px;
-  }
-}
-
+/* التحكم في النصوص */
 .project-card .right h5 {
   font-weight: bold;
 }
@@ -64,7 +68,8 @@
   color: #5b5b5b;
 }
 
-.project-card .right h5, .project-card .right h6 {
+.project-card .right h5, 
+.project-card .right h6 {
   margin: 0px;
 }
 
@@ -79,24 +84,31 @@
   margin-bottom: 0px;
 }
 
+
 .project-card .right a {
   transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
 }
 
 .project-card .right a:hover {
   color: gray !important;
   transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
 }
+
 
 .rtl-text {
   text-align: right;
   direction: rtl;
+}
+
+/* تحسين استجابة التصميم */
+@media (max-width: 767px) {
+  .project-card .right {
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .project-card .right {
+    margin-top: 15px;
+  }
 }

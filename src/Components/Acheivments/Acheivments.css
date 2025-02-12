@@ -1,0 +1,82 @@
+.achievements {
+  margin-top: 180px;
+}
+
+.achievements h2 {
+  text-transform: uppercase;
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.achievements .achievement-item {
+  margin: 30px 0px;
+}
+
+.achievements .achievement-item .icon {
+  color: #fff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.achievements .achievement-details h4 {
+  font-weight: bold;
+}
+
+.achievements .achievement-details h4,
+.achievements .achievement-details p {
+  margin: 0px;
+}
+
+.achievements .achievement-details p {
+  color: rgb(94, 94, 94);
+  font-weight: bold;
+}
+
+.achievements .achievement-details p.special {
+  color: gray;
+}
+
+.icon-container {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+}
+
+.icon-0 {
+  background-color: #FF5733;
+}
+
+/* Red */
+.icon-1 {
+  background-color: #33A1FF;
+}
+
+/* Blue */
+.icon-2 {
+  background-color: #33FF57;
+}
+
+/* Green */
+.icon-3 {
+  background-color: #FFD700;
+}
+
+/* Gold */
+.icon-4 {
+  background-color: #8A2BE2;
+}
+
+/* Purple */

@@ -5,6 +5,8 @@ import Acheivments from './Components/Acheivments/Acheivments.jsx';
 import About from './Components/About/About.jsx';
 import Blogs from './Components/Blogs/Blogs.jsx';
 import Testimonials from './Components/Testimonails/Testimonials.jsx';
+import Contact from './Components/Contact/Contact.jsx';
+import DownFooter from './Components/Down-footer/DownFooter.jsx';
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
       <Blogs />
       <Testimonials />
     </Container>
+    <Contact />
+    <DownFooter />
     </div>
   )
 }

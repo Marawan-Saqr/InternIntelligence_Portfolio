@@ -1,0 +1,20 @@
+.testimonials {
+  margin-top: 180px;
+}
+
+.testimonials h2 {
+  text-transform: uppercase;
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.testimonials .carousel-control-prev, .carousel-control-next {
+  filter: invert(1);
+  width: 1%;
+}
+
+@media (max-width: 767px) {
+  .testimonials p.quotes {
+    font-size: 15px !important;
+  }
+}

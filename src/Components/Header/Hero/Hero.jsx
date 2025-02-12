@@ -45,9 +45,9 @@ const Hero = () => {
         </Col>
       </Row>
       <div className="text-center">
-        <button className="down">
+        {/* <button className="down">
           <i class="fa-solid fa-arrow-down"></i>
-        </button>
+        </button> */}
       </div>
     </div>
   );

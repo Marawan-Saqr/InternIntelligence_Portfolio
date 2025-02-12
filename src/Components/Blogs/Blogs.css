@@ -1,0 +1,9 @@
+.blogs {
+  margin-top: 180px;
+}
+
+.blogs h2 {
+  text-transform: uppercase;
+  font-size: 42px;
+  font-weight: bold;
+}

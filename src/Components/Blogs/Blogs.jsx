@@ -12,7 +12,7 @@ const Blogs = () => {
 
 
   return (
-    <div className="blogs" id="Blogs">
+    <section className="blogs" id="BLOGS">
       <h2 className="text-center">Blogs</h2>
       <Row>
         {blogs.length >= 1 ? (
@@ -21,7 +21,7 @@ const Blogs = () => {
           <h4 className="text-center mt-5 mb-5">No Blogs For Now</h4>
         )}
       </Row>
-    </div>
+    </section>
   );
 };
 

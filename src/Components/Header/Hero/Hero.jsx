@@ -4,7 +4,7 @@ import "./Hero.css";
 
 const Hero = () => {
   return (
-    <div className="hero" id="home">
+    <section className="hero" id="HOME">
       <Row className="justify-content-between align-items-center">
         <Col lg={5}>
           <div className="left">
@@ -46,10 +46,10 @@ const Hero = () => {
       </Row>
       <div className="text-center">
         <button className="down">
-          <a href="#experience"><i class="fa-solid fa-arrow-down"></i></a>
+          <a href="#EXPERIENCE"><i class="fa-solid fa-arrow-down"></i></a>
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 

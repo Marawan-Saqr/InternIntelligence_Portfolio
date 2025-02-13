@@ -12,7 +12,7 @@ const achievements = [
 
 const Achievements = () => {
   return (
-    <div className='achievements' id="achievements">
+    <section className='achievements' id="ACHIEVEMENTS">
       <h2 className='text-center'>Achievements</h2>
       <Row className='justify-content-center'>
         <Col lg={7}>
@@ -30,7 +30,7 @@ const Achievements = () => {
           ))}
         </Col>
       </Row>
-    </div>
+    </section>
   );
 };
 

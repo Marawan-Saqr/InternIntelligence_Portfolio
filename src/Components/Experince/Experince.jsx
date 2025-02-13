@@ -3,12 +3,13 @@ import ProjectCard from './Project-card/ProjectCard.jsx';
 import { projectsData } from '../../Data.js';
 import { useState } from 'react';
 
+
 const Experince = () => {
 
   const [projects] = useState(projectsData);
 
   return (
-    <div className="experince" id="experience">
+    <section className="experince" id="EXPERIENCE">
       <h2 className="text-center">Experince</h2>
       {projects.length >= 1 ? (
         projects.map((project, index) => (
@@ -17,7 +18,7 @@ const Experince = () => {
       ) : (
         <h4 className="text-center mt-5 mb-5">No Projects For Now</h4>
       )}
-    </div>
+    </section>
   );
 };
 

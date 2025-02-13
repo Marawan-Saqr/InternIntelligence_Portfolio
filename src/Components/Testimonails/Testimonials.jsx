@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel, Container } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 import './Testimonials.css';
 
 const testimonialsData = [
@@ -22,7 +22,7 @@ const testimonialsData = [
 
 const Testimonials = () => {
   return (
-    <Container className='testimonials' id="testimonials">
+    <section className='container testimonials' id="TESTIMONIALS">
       <h2 className='text-center mb-4'>Testimonials</h2>
       <Carousel indicators={true} controls={true}>
         {testimonialsData.map((testimonial, index) => (
@@ -30,12 +30,12 @@ const Testimonials = () => {
             <div className='testimonial-item text-center p-4'>
               <p style={{fontWeight: 'bold'}} className='quotes lead'>"{testimonial.quote}"</p>
               <h5 className='mt-3'>{testimonial.author}</h5>
-              <p className='text-muted'>{testimonial.position}</p>
+              <p style={{color: 'gray'}}>{testimonial.position}</p>
             </div>
           </Carousel.Item>
         ))}
       </Carousel>
-    </Container>
+    </section>
   );
 };
 

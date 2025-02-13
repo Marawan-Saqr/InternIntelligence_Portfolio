@@ -3,6 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import './ProjectCard.css';
 
 const ProjectCard = ({ project, index }) => {
+  
   const isEven = index % 2 === 0;
   const cardRef = useRef(null);
 
@@ -41,12 +42,12 @@ const ProjectCard = ({ project, index }) => {
             <p>{project.date}</p>
             <p className="special">{project.description}.</p>
             {project.link && (
-              <a href={project.link} style={{ color: 'black' }} target="_blank" rel="noopener noreferrer">
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
                 <i className="fas fa-link"></i>
               </a>
             )}
             {project.github && (
-              <a href={project.github} style={{ color: 'black', margin: "0px 5px" }} target="_blank" rel="noopener noreferrer">
+              <a href={project.github} style={{ margin: "0px 5px" }} target="_blank" rel="noopener noreferrer">
                 <i className="fa-brands fa-github"></i>
               </a>
             )}

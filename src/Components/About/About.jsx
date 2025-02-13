@@ -5,7 +5,7 @@ import './About.css';
 
 const About = () => {
   return (
-    <div className="about" id="about">
+    <section className="about" id="ABOUT">
       <h2 className="text-center">About</h2>
       <Row className="align-items-center align-items-center">
         <Col lg={4}>
@@ -30,7 +30,7 @@ const About = () => {
           <a href="https://firebasestorage.googleapis.com/v0/b/tapajyoti-bose.appspot.com/o/Tapajyoti%20Bose.pdf?alt=media&token=24a70103-8fe6-4aa3-92dc-42ca11d95735" target="_blank">View Resume</a>
         </Col>
       </Row>
-    </div>
+    </section>
   );
 };
 

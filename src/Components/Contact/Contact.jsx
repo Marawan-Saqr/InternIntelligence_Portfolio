@@ -4,7 +4,7 @@ import { Form } from 'react-bootstrap';
 
 const Contact = () => {
   return (
-    <div className="contact" id="contact">
+    <section className="contact" id="CONTACT">
       <div className="container">
         <h2 className="text-center">Contact</h2>
         <p className="text-center">
@@ -55,7 +55,7 @@ const Contact = () => {
           <button className="btn btn-danger" style={{fontWeight: 'bold'}}>Submit</button>
         </Form>
       </div>
-    </div>
+    </section>
   );
 };
 

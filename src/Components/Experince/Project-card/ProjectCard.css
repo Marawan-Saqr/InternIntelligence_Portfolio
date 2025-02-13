@@ -38,6 +38,10 @@
   box-shadow: 0px 3px 18px -3px black;
 }
 
+body.dark-mode .project-card .left img:hover {
+  box-shadow: 0px 3px 18px -3px rgb(212, 212, 212);
+}
+
 /* تأثير طبقة الشفافية عند التحويم */
 .project-card .left::after {
   content: "";

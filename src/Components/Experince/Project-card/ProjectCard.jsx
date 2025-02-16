@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Row, Col } from "react-bootstrap";
+import { motion } from "framer-motion";
 import './ProjectCard.css';
 
 const ProjectCard = ({ project, index }) => {
@@ -20,7 +21,13 @@ const ProjectCard = ({ project, index }) => {
   };
 
   return (
-    <div className="project-card">
+    <motion.div
+      className="project-card"
+      initial={{ x: isEven ? -100 : 100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: false, amount: 0.2 }}
+    >
       <Row className={`align-items-center ${isEven ? "" : "flex-row-reverse"}`} style={{ marginTop: '90px', marginBottom: '90px' }}>
         <Col xs={7} lg={4}>
           <div 
@@ -54,7 +61,7 @@ const ProjectCard = ({ project, index }) => {
           </div>
         </Col>
       </Row>
-    </div>
+    </motion.div>
   );
 };
 

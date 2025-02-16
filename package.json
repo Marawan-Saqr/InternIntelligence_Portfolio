@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@formspree/react": "^2.5.1",
     "bootstrap": "^5.3.3",
     "framer-motion": "^12.4.3",
     "react": "^19.0.0",

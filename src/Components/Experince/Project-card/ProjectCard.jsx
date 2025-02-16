@@ -39,7 +39,7 @@ const ProjectCard = ({ project, index }) => {
               cardRef.current.style.setProperty("--mouse-y", `50%`);
             }}
           >
-            <img src={`../../../../public/projects/${project.img}`} className="img-fluid" alt={project.title} />
+            <img src={`./${project.img}`} className="img-fluid" alt={project.title} />
           </div>
         </Col>
         <Col lg={5}>

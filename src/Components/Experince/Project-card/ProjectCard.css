@@ -3,7 +3,7 @@
   display: inline-block;
 }
 
-/* تأثير الصورة */
+
 .project-card .left img {
   border-radius: 15px;
   transition: 0.3s;
@@ -11,7 +11,6 @@
   z-index: 1;
 }
 
-/* تأثير الكشاف */
 .project-card .left::before {
   content: "";
   position: absolute;
@@ -32,7 +31,7 @@
   opacity: 1;
 }
 
-/* تأثير الظل عند التحويم */
+
 .project-card .left img:hover {
   transform: translateY(-5px);
   box-shadow: 0px 3px 18px -3px black;
@@ -42,7 +41,7 @@ body.dark-mode .project-card .left img:hover {
   box-shadow: 0px 3px 18px -3px rgb(212, 212, 212);
 }
 
-/* تأثير طبقة الشفافية عند التحويم */
+
 .project-card .left::after {
   content: "";
   position: absolute;
@@ -62,7 +61,7 @@ body.dark-mode .project-card .left img:hover {
   opacity: 1;
 }
 
-/* التحكم في النصوص */
+
 .project-card .right h5 {
   font-weight: bold;
 }
@@ -72,7 +71,7 @@ body.dark-mode .project-card .left img:hover {
   color: #5b5b5b;
 }
 
-.project-card .right h5, 
+.project-card .right h5,
 .project-card .right h6 {
   margin: 0px;
 }
@@ -104,7 +103,7 @@ body.dark-mode .project-card .left img:hover {
   direction: rtl;
 }
 
-/* تحسين استجابة التصميم */
+
 @media (max-width: 767px) {
   .project-card .right {
     margin-top: 15px;

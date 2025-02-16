@@ -13,34 +13,11 @@ const sections = [
 ];
 
 const TopNav = () => {
-  // Component States
   const [showSidebar, setShowSidebar] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeLink, setActiveLink] = useState("#HOME");
+  const [activeLink] = useState("");
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("darkMode") === "true"
   );
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-
-      let currentSection = "#home";
-      document.querySelectorAll("section").forEach((section) => {
-        const { top, height } = section.getBoundingClientRect();
-        if (top <= 100 && top + height > 100) {
-          currentSection = `#${section.id}`;
-        }
-      });
-
-      setActiveLink(currentSection);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   useEffect(() => {
     localStorage.setItem("darkMode", darkMode);
@@ -49,15 +26,11 @@ const TopNav = () => {
     } else {
       document.body.classList.remove("dark-mode");
     }
-  });
+  }, [darkMode]);
 
   return (
     <div className="top-nav">
-      <Navbar
-        expand="lg"
-        className={`top-nav-bar ${isScrolled ? "scrolled" : ""}`}
-        fixed="top"
-      >
+      <Navbar expand="lg" className={`top-nav-bar`} fixed="top">
         <Container>
           <Navbar.Brand href="#HOME">
             <img style={{ width: "40px" }} src="./logo.png" alt="Logo" />
@@ -76,7 +49,6 @@ const TopNav = () => {
                   key={section}
                   href={`#${section}`}
                   className={activeLink === `#${section}` ? "active" : ""}
-                  onClick={() => setActiveLink(`#${section}`)}
                   style={{ textTransform: "uppercase" }}
                 >
                   {section}
@@ -87,12 +59,17 @@ const TopNav = () => {
         </Container>
       </Navbar>
 
-      {/* Sidebar */}
       <div className={`sidebar ${showSidebar ? "show" : ""}`}>
-        <button className="btn btn-danger" onClick={() => setShowSidebar(false)}>
+        <button
+          className="btn btn-danger"
+          onClick={() => setShowSidebar(false)}
+        >
           &times;
         </button>
-        <Nav className="sidebar-nav" style={{ flexDirection: "column", marginTop: "10px" }}>
+        <Nav
+          className="sidebar-nav"
+          style={{ flexDirection: "column", marginTop: "10px" }}
+        >
           {sections.map((section) => (
             <Nav.Link key={section} href={`#${section}`}>
               {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -101,8 +78,9 @@ const TopNav = () => {
         </Nav>
       </div>
 
-      {/* Overlay when sidebar is open */}
-      {showSidebar && <div className="overlay" onClick={() => setShowSidebar(false)} />}
+      {showSidebar && (
+        <div className="overlay" onClick={() => setShowSidebar(false)} />
+      )}
     </div>
   );
 };

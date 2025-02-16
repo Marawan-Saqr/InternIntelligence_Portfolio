@@ -19,7 +19,7 @@ const BlogCard = ({ blog }) => {
         whileTap={{ scale: 0.95 }}
       >
         <Card>
-          <Card.Img variant="top" src={blog.img} />
+          <Card.Img variant="top" src={`../../../../public/blogs/${blog.img}`} />
           <Card.Body>
             <Card.Title style={{ fontWeight: "bold" }}>{blog.title}</Card.Title>
             <div style={{ color: "gray" }} className="date">

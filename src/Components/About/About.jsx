@@ -16,7 +16,7 @@ const About = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.2 }}
           >
-            <img src="../../../public/about.webp" className="img-fluid" />
+            <img src="./about.webp" className="img-fluid" />
           </motion.div>
         </Col>
 
